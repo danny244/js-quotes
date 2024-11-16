@@ -14,9 +14,14 @@ const app = document.getElementById('app');
 
 app.style.width = '100vw';
 app.style.height = '100vh';
+app.style.width = '100svw';
+app.style.height = '100svh';
 app.style.display = 'flex';
 app.style.justifyContent = 'center';
 app.style.alignItems = 'center'
+
+
+
 
 
 // creating the parent div that would hold our quotes and the text;
@@ -67,6 +72,12 @@ pTag.textContent = 'See you on the other side where we will discuss events in ja
 parentDiv.append(spanTag1);
 parentDiv.append(pTag);
 parentDiv.append(spanTag2);
+
+
+
+
+
+
 
 // appending our parentDiv tag that we created using javascript into the main tag in the html
 app.append(parentDiv);
