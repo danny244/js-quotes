@@ -1,0 +1,120 @@
+:root {
+	--tooltip-background-color: #dbd4d4;
+	--color: #000000;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	font-size: 0.7rem;
+	color: var(--color);
+
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	min-width: 100vw;
+	min-height: 100vh;
+	height: 100%;
+
+	padding: 0.8rem;
+}
+
+main > div:first-child {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+
+	max-width: 75rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+blockquote {
+	background-color: #f9f9f9;
+	border-left: 10px solid #ccc;
+	margin: 0 0 0 16rem;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+	display: inline-block;
+	white-space: pre;
+	width: fit-content;
+      cursor: default;
+}
+
+blockquote:before {
+	color: #ccc;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+
+.top {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: max-content;
+
+	display: none;
+
+	background-color: var(--tooltip-background-color);
+	padding: 0.5rem;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: max-content;
+	height: fit-content;
+
+	display: none;
+
+	background-color: var(--tooltip-background-color);
+	padding: 0.5rem;
+}
+
+.right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: max-content;
+
+	display: none;
+
+	background-color: var(--tooltip-background-color);
+	padding: 0.5rem;
+}
+
+.arrowRight,
+.arrowBottom,
+.arrowTop {
+	position: absolute;
+	background-color: var(--tooltip-background-color);
+	width: 8px;
+	height: 8px;
+	transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+      blockquote {
+            margin: 0 0 0 5rem;
+      }
+}
+
+@media (max-width: 560px) {
+      blockquote {
+            margin: 0 0 0 3rem;
+      }
+}
